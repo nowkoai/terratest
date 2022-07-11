@@ -12,6 +12,6 @@ resource "aws_instance" "demo" {
   user_data = file("./userdata/demo.sh")
 
   tags = {
-    Name = "Server-${count.index}"
+    Name = "Server2-${count.index}"
   }
 }
