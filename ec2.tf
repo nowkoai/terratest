@@ -1,6 +1,7 @@
 resource "aws_instance" "demo" {
+  count = 1
   ami           = "ami-0404778e217f54308"
-  instance_type = "t3.micro"
+  instance_type = var.instance_type
 
   iam_instance_profile = aws_iam_instance_profile.demo.name
 
@@ -11,6 +12,6 @@ resource "aws_instance" "demo" {
   user_data = file("./userdata/demo.sh")
 
   tags = {
-    Name = "tf_demo"
+    Name = "Server-${count.index}"
   }
 }
