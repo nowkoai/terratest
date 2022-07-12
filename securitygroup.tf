@@ -1,8 +1,8 @@
 resource "aws_security_group" "demo" {
-  name = "tf_demo"
+  name = "tf_demo2"
 
   tags = {
-    Name = "tf_demo"
+    Name = "tf_demo9999999"
   }
 }
 
